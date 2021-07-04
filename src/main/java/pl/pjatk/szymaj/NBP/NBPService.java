@@ -13,7 +13,7 @@ public class NBPService {
         this.restTemplate = restTemplate;
     }
 
-    public ResponseEntity<DailyRate> getDataByDate(String startDate, String endDate) {
+    public DailyRate getDataByDate(String startDate, String endDate) {
         return restTemplate.getForEntity("http://api.nbp.pl/api/cenyzlota/" + startDate + "/" + endDate+ "/", DailyRate.class).getBody();
     }
 }
