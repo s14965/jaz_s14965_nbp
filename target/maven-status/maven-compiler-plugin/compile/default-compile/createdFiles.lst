@@ -1,6 +1,7 @@
 pl\pjatk\szymaj\JazS14965NbpApplication.class
 pl\pjatk\szymaj\NBP\Gold.class
 pl\pjatk\szymaj\NBP\DailyRate.class
+pl\pjatk\szymaj\NBP\NBPRepository.class
 pl\pjatk\szymaj\NBP\NBPService.class
 pl\pjatk\szymaj\NBP\NBPRestController.class
 pl\pjatk\szymaj\config\RestTemplateConfig.class
