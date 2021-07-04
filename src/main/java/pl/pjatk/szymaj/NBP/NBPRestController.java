@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("/nbp")
 public class NBPRestController {
@@ -17,7 +19,7 @@ public class NBPRestController {
 
     @GetMapping("/{startDate}/{endDate}")
     public ResponseEntity<DailyRate> getAverageRate(@PathVariable String startDate, String endDate)
-    {
-        return ResponseEntity.ok().body(nbpService.getDataByDate(startDate, endDate));
+    {   ArrayList DailRateList = new ArrayList();
+        return (ResponseEntity.ok().body(nbpService.getDataByDate(startDate, endDate)));
     }
 }
