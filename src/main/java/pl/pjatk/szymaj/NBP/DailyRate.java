@@ -1,16 +1,18 @@
 package pl.pjatk.szymaj.NBP;
 
 import javax.persistence.*;
+import java.util.Date;
 
 @Entity
 public class DailyRate {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
-    private String date;
+    private Date startdate;
+    private Date endtdate;
+    private Long rate;
     @Enumerated(EnumType.STRING)
     private Gold gold;
-    private Long rate;
 
     public DailyRate(){}
 
@@ -22,12 +24,28 @@ public class DailyRate {
         this.id = id;
     }
 
-    public String getDate() {
-        return date;
+    public Date getStartdate() {
+        return startdate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartdate(Date startdate) {
+        this.startdate = startdate;
+    }
+
+    public Date getEndtdate() {
+        return endtdate;
+    }
+
+    public void setEndtdate(Date endtdate) {
+        this.endtdate = endtdate;
+    }
+
+    public Long getRate() {
+        return rate;
+    }
+
+    public void setRate(Long rate) {
+        this.rate = rate;
     }
 
     public Gold getGold() {
@@ -38,11 +56,5 @@ public class DailyRate {
         this.gold = gold;
     }
 
-    public Long getRate() {
-        return rate;
-    }
 
-    public void setRate(Long rate) {
-        this.rate = rate;
-    }
 }
